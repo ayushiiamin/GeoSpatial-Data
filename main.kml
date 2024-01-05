@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Document>
+<Style id="z1">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href></Icon></IconStyle>
+<LabelStyle><scale>1</scale></LabelStyle>
+</Style>
+
+<Placemark><name>Lorenzo</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.27212737859607,34.028536536398796</coordinates></Point>
+</Placemark>
+
+<Folder>
+<name>Schools</name>
+
+<Folder>
+<name>Viterbi</name>
+<Placemark><name>Comp Sci</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28920809220344,34.019213272441185</coordinates></Point>
+</Placemark>
+<Placemark><name>Petrol Chem Eng</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28887937657802,34.01986224545317</coordinates></Point>
+</Placemark>
+</Folder>
+
+<Folder>
+<name>Marshall</name>
+<Placemark><name>Accounting</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28586237087265,34.019340106912935</coordinates></Point>
+</Placemark>
+<Placemark><name>FBE</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28520892138565,34.01862606626436</coordinates></Point>
+</Placemark>
+</Folder>
+
+<Folder>
+<name>Dornsife</name>
+<Placemark><name>Scl of Religion</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28715229734001,34.019318429430484</coordinates></Point>
+</Placemark>
+<Placemark><name>Sociology</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.287320756653,34.020251524673256</coordinates></Point>
+</Placemark>
+</Folder>
+
+<Folder>
+<name>Annenberg</name>
+<Placemark><name>Communication</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2853870147244,34.02164817464684</coordinates></Point>
+</Placemark>
+<Placemark><name>Jounalism</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2870265309559,34.02119367502272</coordinates></Point>
+</Placemark>
+</Folder>
+
+<Folder>
+<name>Cinematic Arts</name>
+<Placemark><name>Cinema</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28623833937479,34.02274657718618</coordinates></Point>
+</Placemark>
+<Placemark><name>Animation Games</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2877778670935,34.02409779968991</coordinates></Point>
+</Placemark>
+</Folder>
+
+<Folder>
+<name>Roski</name>
+<Placemark><name>Art</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28744567648852,34.01900080868352</coordinates></Point>
+</Placemark>
+<Placemark><name>Design</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28775266163615,34.01922917083589</coordinates></Point>
+</Placemark>
+</Folder>
+
+</Folder>
+
+<Style id="convex">
+<LineStyle><width>1.5</width></LineStyle>
+<PolyStyle><outline>2</outline><color>#FF000080</color></PolyStyle>
+</Style>
+
+<Placemark><name>Convex Hull</name>
+<styleUrl>#convex</styleUrl>
+<Polygon>
+<outerBoundaryIs><LinearRing>
+<coordinates>
+-118.28520892138565,34.01862606626436,0.
+-118.28920809220344,34.019213272441185,0.
+-118.2877778670935,34.02409779968991,0.
+-118.27212737859607,34.028536536398796,0.
+-118.28520892138565,34.01862606626436,0.
+</coordinates>
+</LinearRing></outerBoundaryIs>
+</Polygon>
+
+</Placemark>
+
+
+<Style id="nnline"><LineStyle><width>3</width><color>#FFFF00FF</color></LineStyle></Style>
+
+<Placemark><name>Nearest Neighbour 1</name>
+<styleUrl>#nnline</styleUrl>
+<LineString><extrude>1</extrude>
+<coordinates>-118.27212737859607,34.028536536398796,0. -118.2853870147244,34.02164817464684,0</coordinates>
+</LineString></Placemark>
+
+<Placemark><name>Nearest Neighbour 2</name>
+<styleUrl>#nnline</styleUrl>
+<LineString><extrude>1</extrude>
+<coordinates>-118.27212737859607,34.028536536398796,0. -118.28623833937479,34.02274657718618,0</coordinates>
+</LineString></Placemark>
+
+<Placemark><name>Nearest Neighbour 3</name>
+<styleUrl>#nnline</styleUrl>
+<LineString><extrude>1</extrude>
+<coordinates>-118.27212737859607,34.028536536398796,0. -118.2877778670935,34.02409779968991,0</coordinates>
+</LineString></Placemark>
+
+<Placemark><name>Nearest Neighbour 4</name>
+<styleUrl>#nnline</styleUrl>
+<LineString><extrude>1</extrude>
+<coordinates>-118.27212737859607,34.028536536398796,0. -118.28520892138565,34.01862606626436,0</coordinates>
+</LineString></Placemark>
+
+</Document></kml>

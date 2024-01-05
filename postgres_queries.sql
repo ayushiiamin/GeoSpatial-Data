@@ -1,0 +1,31 @@
+-- Table Creation
+CREATE extension POSTGIS;
+CREATE TABLE uscCoordinates (name varchar, geom geometry);
+
+
+INSERT INTO uscCoordinates VALUES
+  ('Lorenzo', 'POINT(-118.27212737859607 34.028536536398796)'),
+  ('Comp Sci', 'POINT(-118.28920809220344 34.019213272441185)'),
+  ('Petrol Chem Eng', 'POINT(-118.28887937657802 34.01986224545317)'),
+  ('Accounting', 'POINT(-118.28586237087265 34.019340106912935)'),
+  ('FBE', 'POINT(-118.28520892138565 34.01862606626436)'),
+  ('Scl of Religion', 'POINT(-118.28715229734001 34.019318429430484)'),
+  ('Sociology', 'POINT(-118.287320756653 34.020251524673256)'),
+  ('Communication', 'POINT(-118.2853870147244 34.02164817464684)'),
+  ('Journalism', 'POINT(-118.2870265309559 34.02119367502272)'),
+  ('Cinema', 'POINT(-118.28623833937479 34.02274657718618)'),
+  ('Animation Games', 'POINT(-118.2877778670935 34.02409779968991)'),
+  ('Art', 'POINT(-118.28744567648852 34.01900080868352)'),
+  ('Design', 'POINT(-118.28775266163615 34.01922917083589)');
+
+-- Convex Hull
+SELECT ST_AsText(ST_ConvexHull(
+     ST_Collect(
+        uscCor.geom)))
+	FROM uscCoordinates as uscCor;
+
+-- Four Nearest Neighbours
+SELECT name, ST_asText(geom)
+FROM uscCoordinates
+where name != 'Lorenzo'
+ORDER BY 'POINT(-118.27212737859607 34.028536536398796)' <-> geom LIMIT 4;
